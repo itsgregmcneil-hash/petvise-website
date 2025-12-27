@@ -1207,8 +1207,39 @@ a {
     opacity: 1;
   }
 
-  .site-nav a {
+  /* Force all mobile nav links to be dark text */
+  .site-nav a:not(.btn) {
     padding: 0.75rem 0;
+    color: var(--color-text) !important;
+    text-shadow: none !important;
+  }
+
+  /* Mobile nav schedule button - no border, dark text, no background */
+  .site-nav .btn-schedule {
+    background: transparent !important;
+    color: var(--color-text) !important;
+    border: none !important;
+    padding: 0.75rem 0 !important;
+    justify-content: flex-start;
+    text-shadow: none !important;
+  }
+
+  .site-nav .btn-schedule:hover {
+    background: transparent !important;
+    color: var(--color-primary) !important;
+  }
+
+  /* Override header-always-white styles for mobile menu on about/practices pages */
+  .site-header.header-always-white .site-nav .btn-schedule {
+    background: transparent !important;
+    color: var(--color-text) !important;
+    border: none !important;
+  }
+
+  .site-header.header-always-white .site-nav .btn-schedule:hover {
+    background: transparent !important;
+    color: var(--color-primary) !important;
+    border: none !important;
   }
 
   .nav-toggle {
@@ -1218,15 +1249,6 @@ a {
   .footer-inner {
     flex-direction: column;
     gap: 1rem;
-  }
-
-  /* Mobile nav button styling */
-  .site-nav .btn-primary {
-    background: transparent;
-    color: var(--color-text);
-    border: none;
-    padding: 0.5rem 0;
-    justify-content: flex-start;
   }
 }
 
