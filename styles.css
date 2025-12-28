@@ -883,7 +883,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 0.75rem;
-  margin-top: -1rem;
+  margin-top: -1.5rem;
 }
 
 .testimonial-dot {
@@ -1174,6 +1174,31 @@ a {
   .concerns-middle::before,
   .concerns-right::before {
     display: none;
+  }
+
+  /* Mobile: pets displayed horizontally */
+  .concerns-pets-list {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .pet-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 120px;
+  }
+
+  .pet-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pet-item span {
+    font-size: 0.85rem;
   }
 
   .about-split {
